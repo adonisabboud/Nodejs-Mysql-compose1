@@ -1,0 +1,19 @@
+# 1. SECURITY (Never bake secrets into the image)
+.env
+.git
+.gitignore
+
+# 2. DEPENDENCY TRAPS (Never copy local Mac/Windows packages)
+node_modules/
+app/node_modules/
+npm-debug.log
+
+# 3. DOCKER BLUEPRINTS (The container doesn't need its own instructions)
+Dockerfile
+docker-compose.yml
+
+# 4. LEFTOVER DATA (Just in case that old folder comes back!)
+mysql_volume/
+
+# 5. DOCS (Save a few kilobytes of space)
+README.md
